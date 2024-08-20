@@ -419,6 +419,103 @@ img {
 }
 
 
+/* SITE-FOOTER */
+.site-footer {
+    color: var(--white-color);
+    background-color: var(--heading-color);
+    padding-top: 48px;
+    padding-bottom: 48px;
+    
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+}
+
+.site-footer__container {
+    display: flex;
+    align-items: stretch;
+}
+
+.site-footer__socials {
+    margin-right: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    img {
+        width: 140px;
+        height: 20px;
+        display: block;
+    }
+    
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 13.5px;
+    }
+    
+    svg {
+        color: var(--white-color);
+        display: block;
+        transition: color 0.3s ease;
+    }
+    
+    svg:hover {
+        color: var(--striking-color);
+    }
+}
+
+.site-footer__links {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 160px;
+    }
+    
+    a {
+        color: var(--white-color);
+        transition: color 0.3s ease;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 26px;
+        letter-spacing: -0.2px;
+        display: block;
+    }
+    
+    a:hover {
+        color: var(--striking-color);
+    }
+}
+
+.site-footer__about {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+    p {
+        margin: 0;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 26px;
+        letter-spacing: -0.2px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+
 /* MEDIA-QUERIES */
 @media only screen and (max-width: 1300px) {
     .hero__content {
@@ -428,6 +525,35 @@ img {
     .choose__cards,
     .article__cards {
         justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+    .site-footer__container {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        
+        .site-footer__socials {
+            margin-right: 0;
+            gap: 32px;
+        }
+        
+        .site-footer__links {
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            
+            a {
+                text-align: center;
+            }
+        }
+        
+        .site-footer__about {
+            margin-left: 0;
+            align-items: center;
+            gap: 24px;
+        }
     }
 }
 
